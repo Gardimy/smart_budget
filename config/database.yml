@@ -21,8 +21,6 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   # uses the env variables for username and password
-  username: <%= ENV['POSTGRES_USERNAME'] %>
-  password: <%= ENV['POSTGRES_PASSWORD'] %> 
 
 development:
   <<: *default
@@ -88,5 +86,3 @@ production:
   encoding: "unicode"
   url: <%= ENV["DATABASE_URL"] %>
   database: smartbudget
-  username: <%= ENV['POSTGRES_USERNAME'] %>
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
